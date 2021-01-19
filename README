@@ -1,0 +1,19 @@
+App::SQL-CSV-Parser - SQL-Kommandos und -Abfragen auf CSV-Dateien anwenden
+
+Das CPAN-Modul DBI (DataBase Interface) ist Perls einheitliche
+Datenbankschnittstelle und mit dem Datenbank-Treiber DBD::CSV steht eine
+SQL-Schnittstelle für CSV-Dateien (Comma-Separated Value) bereit.
+
+Hinweis: Für eigene Projekte sollte ein richtiges Datenbanksystem zum
+Einsatz kommen! Beispielsweise SQLite. Dort befindet sich die gesamte
+Datenbank auch in einer einzigen Datei.
+
+* https://dbi.perl.org
+* https://metacpan.org/pod/DBI::DBD
+* https://metacpan.org/pod/DBD::CSV
+* https://www.sqlite.org
+
+Install from CPAN
+
+	cpan App::SQL-CSV-Parser
+
