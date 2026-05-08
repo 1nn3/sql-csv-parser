@@ -1,0 +1,50 @@
+=pod
+
+=head1 NAME
+
+SQL-CSV-parser - Execute a SQL-statement on a CSV-file
+
+=head1 SYNOPSIS
+
+B<sql-csv-parser> --sql-statement <SQL-statment> [--file <file.csv|directory>] [--csv-sep-char <delimiter>]
+
+	sql-csv-parser --sql-statement "INSERT INTO file.csv ('colum') VALUES ('value')"
+
+	sql-csv-parser --sql-statement "UPDATE file.csv SET colum='value' WHERE colum='value'"
+
+	sql-csv-parser --sql-statement "SELECT * FROM file.csv"
+
+	sql-csv-parser --sql-statement 'SELECT * FROM file.csv' --file ./file.csv \
+		| while IFS="	" read col1 col2 _; do :; done
+
+=head1 OPTIONS
+
+=over
+
+=item --sql-statement <string>
+
+SQL-statment.
+
+=item --file <string>
+
+Filename of file used for the table; Defaults to I<./table>.
+
+=item --csv-sep-char <string>
+
+CSV-delimiter; Defaults to I<,>.
+
+=item --lsep <string>
+
+=item --fsep <string>
+
+=item --maxlen <integer>
+
+The Results are print (a dump) to STDOUT, separated by I<--lsep> wich defaults to I<\n>. The option I<--fsep> defaults to I<\t> and I<--maxlen> defaults to I<256>.
+
+=back
+
+=head1 SEE ALSO
+
+L<DBI(3pm)>, L<DBD::CSV(3pm)>
+
+=cut
